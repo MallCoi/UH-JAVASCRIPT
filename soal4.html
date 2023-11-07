@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 4</title>
+  </head>
+  <body>
+    <h3>
+      4. buatlah program untuk menghiotung volume kubus dengan rumus sisi x sisi
+      x sisi. input yang dibututhkan hanya sisi kubus.
+    </h3>
+
+    <p for="sisi">Panjang Sisi Kubus:</p>
+    <input type="number" id="sisi" min="0" step="any" />
+    <button onclick="hitungVolume()">Hitung</button>
+
+    <p>Volume Kubus adalah: <span id="hasil"></span></p>
+
+    <script>
+      function hitungVolume() {
+        const sisi = parseFloat(document.getElementById("sisi").value);
+        const volume = sisi ** 3;
+        document.getElementById("hasil").textContent = volume;
+      }
+    </script>
+  </body>
+</html>
